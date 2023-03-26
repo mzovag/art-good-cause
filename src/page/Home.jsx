@@ -1,13 +1,73 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Card from '../components/elements/Card';
 import Text from '../components/elements/Text';
-import Button from '../components/elements/Button';
-import Time from '../components/widgets/Time';
-import Settings from '../components/widgets/Settings';
+import ProjectCard from '../components/elements/ProjectCard';
+// import Button from '../components/elements/Button';
+// import Time from '../components/widgets/Time';
+// import Settings from '../components/widgets/Settings';
 import img from '../components/assets/test-image.svg';
 // import { onAuthStateChanged } from "firebase/auth";
 import { db } from '../firebase'; 
 import { onValue, ref } from "firebase/database";
+const progectsData = [
+  {
+    title: "Test NFT Image",
+    status: "art",
+    author: "Joe Doe",
+    price: "30",
+    imageSrc: require("../components/assets/image_1.png")
+  },
+  {
+    title: "Test New Image",
+    status: "art",
+    author: "Jony Doe",
+    price: "0",
+    imageSrc: require("../components/assets/image_2.png")
+  }, 
+  {
+    title: "Test Image 2",
+    status: "art",
+    author: "Joe Mackfol",
+    price: "25",
+    imageSrc: require("../components/assets/image_3.png")
+  },
+  {
+    title: "Test New Image 3",
+    status: "art",
+    author: "Jony Mars",
+    price: "40",
+    imageSrc: require("../components/assets/image_4.png")
+  },
+  {
+    title: "Test NFT Image",
+    status: "art",
+    author: "Joe Doe",
+    price: "50",
+    imageSrc: require("../components/assets/image_5.png") 
+  },
+  {
+    title: "Test New Image",
+    status: "art",
+    author: "Jony Doe",
+    price: "70",
+    imageSrc: require("../components/assets/image_6.png")
+  },
+  {
+    title: "Test NFT Image",
+    status: "art",
+    author: "Joe Doe",
+    price: "10",
+    imageSrc: require("../components/assets/image_7.png")
+  },
+  {
+    title: "Test New Image",
+    status: "art",
+    author: "Jony Doe",
+    price: "90",
+    imageSrc: require( "../components/assets/image-8.png")
+  }
+]
+
 
 const Home = () => {
     const [ openTaskInput, setOpenTaskInput ] = useState(false);
@@ -71,7 +131,7 @@ const Home = () => {
     <section className="bg-primary rounded-2xl  px-10  mb-10">    
       <div className='flex justify-between items-center py-20'>
         <div className='flex flex-col justify-between w-2/4'>
-          <Text className='text-xl pb-12'>Charity NFT gallery.  <br/> Be part of the art for a good Cause.</Text>
+          <Text className='text-4xl pb-12'>Charity NFT gallery.  <br/> Be part of the art for a good Cause.</Text>
           <div>
             <button className='bg-black text-white py-4 px-12 mb-4 max-w-xs rounded-lg'>Show me what you have!</button>
             <Text className='text-base leading-6'>for buying or reserving a hft-token you need only credit card.</Text>
@@ -93,15 +153,21 @@ const Home = () => {
     </section>
 
     <section className="py-12 flex flex-col">
-      <Text className='text-lg font-bold'>Last added illustrations</Text>
+      <Text className='text-2xl font-bold'>Last added illustrations</Text>
       <div className='grid grid-cols-4 gap-4 mt-4'>
-      <img src={img} alt='main' />
-      <img src={img} alt='main' />
-      <img src={img} alt='main' />
-      <img src={img} alt='main' />
-      <img src={img} alt='main' />
+        {progectsData.map(( item, idx ) => 
+          <Card title={item.title} src={item.imageSrc} price={item.price} status={item.status} author={item.author} />
+        )}
       </div>
     </section>
+
+    <section className="py-12 flex flex-col">
+      <Text className='text-2xl font-bold'>The Fund</Text>
+      <div className='grid grid-cols-4 gap-4 mt-4'>
+        <ProjectCard />
+      </div>
+    </section>
+
     </>
     
   )

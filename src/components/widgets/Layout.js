@@ -1,5 +1,6 @@
 
 import Header from './Header';
+import Footer from './Footer';
 
 const Layout = ({children}) => {
   return(
@@ -9,6 +10,8 @@ const Layout = ({children}) => {
       <div className="px-10">
           {children}
       </div>
+
+      <Footer />
     </div>
   )
 }

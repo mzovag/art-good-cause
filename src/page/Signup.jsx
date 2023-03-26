@@ -41,8 +41,8 @@ const Signup = () => {
             <div className="flex h-screen items-center justify-center px-4 sm:px-6 lg:px-8">
                 <div className="w-full max-w-md space-y-8">
                     <div>
-                        <Text className="text-4xl text-white text-center font-bold mb-2">
-                          Art For a <span className="text-secondary"> Good Cause</span>
+                        <Text className="text-xl text-white text-center font-bold mb-2">
+                          Art For a <span className="text-secondary text-2xl"> Good Cause</span>
                         </Text>   
 
                         <h2 className="text-white text-center text-base  tracking-tight text-gray-900">
