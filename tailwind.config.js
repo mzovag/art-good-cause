@@ -16,6 +16,7 @@ module.exports = {
       'gray-190': 'rgba(0, 0, 0, 0.19)',
       'gray-800': 'rgba(12, 12, 12, 1)',
       'lightGray': 'rgba(255, 255, 255, 0.82)',
+      'error': '#800d1a',
       'card': '#A68799',
       'sidebar': '#F5F4B1',
       'card-bg': 'rgba(256, 256, 256, 0.4)',
@@ -46,6 +47,15 @@ module.exports = {
       width: {        
         '129': '59rem',
         '131': '30rem'
+      },
+      animation: {
+        slide: 'slide 3s ease-out',
+      },
+      keyframes: {
+        slide: {
+          '0%': { opacity: 0.2 },
+          '100%': { opacity: 1 },
+        },
       }
     },
   },

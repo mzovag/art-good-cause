@@ -63,7 +63,7 @@ const Header = () => {
           // https://firebase.google.com/docs/reference/js/firebase.User
           const uid = user.uid;
           isLoginSet(true);
-          console.log("uid", uid)
+          console.log("user", user)
         } else {
           // User is signed out
           // ...
@@ -93,14 +93,10 @@ const Header = () => {
         </NavLink>
     
         <NavLink 
-          to="/notes"
-          className={({isActive}) => 
-            isActive? "inline-block text-secondary mr-4 text-sm"
-            : 
-            "mr-4 text-sm"
-          }      
+          to="/#what_is"
+          className="mr-4 text-sm"
         >
-          Notes                  
+          What's Pre-NFT                  
         </NavLink>
     
         <NavLink 
