@@ -1,9 +1,0 @@
-export const progectsData = [
-  {
-    title: "Test NFT Image",
-    status: "art",
-    author: "Joe Doe",
-    price: "1000",
-    imageSrc: "gs://art-for-good-cause.appspot.com/image_1.png" 
-  }
-]

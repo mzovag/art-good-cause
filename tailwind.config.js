@@ -3,10 +3,6 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  // sidebr #202020
-// min #272727
-// boxes #323232
-// current nvbr #2d2d2d
   theme: {
     colors: {
       'primary': '#779684',
@@ -15,6 +11,11 @@ module.exports = {
       'white': '#fff',
       'black': '#000',
       'gray': 'rgba(244, 244, 244, 1)',
+      'gray-100': 'rgba(0, 0, 0, 0.1)',
+      'gray-300': 'rgba(0, 0, 0, 0.3)',
+      'gray-190': 'rgba(0, 0, 0, 0.19)',
+      'gray-800': 'rgba(12, 12, 12, 1)',
+      'lightGray': 'rgba(255, 255, 255, 0.82)',
       'card': '#A68799',
       'sidebar': '#F5F4B1',
       'card-bg': 'rgba(256, 256, 256, 0.4)',
@@ -50,5 +51,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
   ],
 }

@@ -10,31 +10,31 @@ const Footer = () => {
               <img src={logo} width={"220px"} className=' mr-3' alt='Logo' />
             </a>
           </div>
-          <div className='grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3'>
+          <div className='grid grid-cols-2 gap-8'>
             <div>
-              <h2 className='mb-6 text-xl font-semibold text-gray-900 uppercase dark:text-white'>Information</h2>
-              <ul className='text-gray-600 dark:text-gray-400 font-medium'>
-                <li className='mb-4'>
+              <h2 className='mb-6 text-base font-semibold text-gray-300 '>Information</h2>
+              <ul className='text-gray-800 font-lg font-semibold'>
+                <li className='mb-2'>
                   <a href="./faq" className='hover:underline'>FAQ</a>
                 </li>
-                <li>
+                <li className='mb-2'>
                   <a href="./mission" className='hover:underline'>Our Mission</a>
                 </li>
-                <li>
+                <li className='mb-2'>
                   <a href="./what-nft" className='hover:underline'>What is pre-NFT</a>
                 </li>
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-xl font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
-              <ul className="text-gray-600 dark:text-gray-400 font-medium">
-                <li className="mb-4">
+              <h2 className="mb-6 text-base font-semibold text-gray-300">Legal</h2>
+              <ul className="text-gray-800 font-lg font-semibold">
+                <li className="mb-2">
                     <a href="./" className='hover:underline'>Rules</a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-2">
                     <a href="./" className='hover:underline'>Privacy Policy</a>
                 </li>
-                <li>
+                <li className="mb-2">
                     <a href="./" className='hover:underline'>Terms &amp; Conditions</a>
                 </li>
               </ul>

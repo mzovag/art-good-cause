@@ -4,13 +4,14 @@ import Notes from './page/Notes';
 import Signup from './page/Signup';
 import Login from './page/Login';
 import Timer from './page/Timer';
-import Stopwatch from './page/Stopwatch';
+import ProjectPage from './page/ProjectPage';
 import {Routes, Route} from 'react-router-dom';
 import Layout from './components/widgets/Layout';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, useParams } from 'react-router-dom';
 
 
 function App() {
+  let { id } = useParams();
   return (
     <Router>
       <div className="App bg-white">
@@ -48,10 +49,10 @@ function App() {
               />
                 
               <Route 
-                path="/stopwatch"
+                path="/progect/:id"
                 element={
                   <Layout>
-                    < Stopwatch />
+                    < ProjectPage />
                   </Layout>
                 
                 }
