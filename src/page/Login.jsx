@@ -8,6 +8,7 @@ const Login = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [errorText, setErrorText] = useState(null);
        
     const onLogin = (e) => {
         e.preventDefault();
@@ -19,9 +20,9 @@ const Login = () => {
             console.log(user);
         })
         .catch((error) => {
-            const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorCode, errorMessage)
+            console.log(errorMessage)
+            setErrorText(errorMessage);
         });
         
     }
@@ -71,7 +72,11 @@ const Login = () => {
                                             onChange={(e)=>setPassword(e.target.value)}
                                         />
                                     </div>
-                                </div>                        
+                                    {errorText === "Firebase: Error (auth/user-not-found)." || errorText === "Firebase: Error (auth/wrong-password)."
+                                    ? (<div className="text-error mt-1 ">Username or password is not corrected</div> )
+                                    : null }
+                                </div>
+                                                      
 
                                 <div>
                                     <button                                     

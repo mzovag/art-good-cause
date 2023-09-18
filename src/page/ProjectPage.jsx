@@ -2,6 +2,10 @@ import React from 'react';
 import Card from '../components/elements/Card';
 import bottom from '../components/assets/animation.svg';
 import Text from '../components/elements/Text';
+import ImageSlider from '../components/elements/ImageSlider';
+import slide1 from "../components/assets/image_1.png";
+import slide2 from "../components/assets/image_2.png";
+import slide3 from "../components/assets/image_3.png";
 
 const Progect = {
   id: "charity_org_1",
@@ -83,13 +87,17 @@ const ProjectPage = () => {
 
   return (
     <section>
-        <div className='flex flex-col justify-center relative w-full rounded-xl min-h-[665px]' style={{ backgroundImage: `url(${Progect.bgImage})` }}>                  
-          <img src={Progect.orgAvatar} alt={Progect.orgName} className='w-32 h-32 ml-10 border-4 border-gray-300 rounded-lg object-cover' />
-          <h2 className='text-4xl text-white ml-10 mb-2 mt-5'>{Progect.orgName}</h2>
-          <div className='flex bg-white p-5  absolute -bottom-6 left-10 shadow-md rounded-md'>
-            <div className='text-base text-gray-800'>{Progect.artsQuantity} Arts | {Progect.cost} NFT</div>
+        <div className='flex flex-row items-center justify-between relative w-full rounded-xl min-h-[665px]' style={{ backgroundImage: `url(${Progect.bgImage})` }}>      
+          <div className='flex flex-col'>
+            <img src={Progect.orgAvatar} alt={Progect.orgName} className='w-32 h-32 ml-10 border-4 border-gray-300 rounded-lg object-cover' />
+            <h2 className='text-4xl text-white ml-10 mb-2 mt-5'>{Progect.orgName}</h2>
+            <div className='flex bg-white p-5  absolute -bottom-6 left-10 shadow-md rounded-md'>
+              <div className='text-base text-gray-800'>{Progect.artsQuantity} Arts | {Progect.cost} NFT</div>
+            </div>
           </div>
-          
+          <div className="mr-10">
+            <ImageSlider images={[slide1, slide2, slide3]} />
+          </div>       
           
         </div>
         <div className='line-clamp-3 text-gray-800 text-base mt-8 ml-96'>{Progect.description}</div>
