@@ -15,13 +15,13 @@ const Footer = () => {
               <h2 className='mb-6 text-base font-semibold text-gray-300 '>Information</h2>
               <ul className='text-gray-800 font-lg font-semibold'>
                 <li className='mb-2'>
-                  <a href="./faq" className='hover:underline'>FAQ</a>
+                  <a href="/faq" className='hover:underline'>FAQ</a>
                 </li>
                 <li className='mb-2'>
-                  <a href="./mission" className='hover:underline'>Our Mission</a>
+                  <a href="/mission" className='hover:underline'>Our Mission</a>
                 </li>
                 <li className='mb-2'>
-                  <a href="./what-nft" className='hover:underline'>What is pre-NFT</a>
+                  <a href="/#what_is" className='hover:underline'>What is pre-NFT</a>
                 </li>
               </ul>
             </div>

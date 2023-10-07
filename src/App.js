@@ -4,6 +4,7 @@ import Notes from './page/Notes';
 import Signup from './page/Signup';
 import Login from './page/Login';
 import FaqPage from './page/FaqPage';
+import Mission from './page/Mission';
 import ProjectPage from './page/ProjectPage';
 import {Routes, Route} from 'react-router-dom';
 import Layout from './components/widgets/Layout';
@@ -43,6 +44,16 @@ function App() {
                 element={
                   <Layout>
                     <FaqPage />
+                  </Layout>
+                
+                }
+              />
+
+<Route 
+                path="/mission"
+                element={
+                  <Layout>
+                    <Mission />
                   </Layout>
                 
                 }
