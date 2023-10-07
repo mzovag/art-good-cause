@@ -3,7 +3,7 @@ import Home from './page/Home';
 import Notes from './page/Notes';
 import Signup from './page/Signup';
 import Login from './page/Login';
-import Timer from './page/Timer';
+import FaqPage from './page/FaqPage';
 import ProjectPage from './page/ProjectPage';
 import {Routes, Route} from 'react-router-dom';
 import Layout from './components/widgets/Layout';
@@ -39,10 +39,10 @@ function App() {
               />
 
               <Route 
-                path="/timer"
+                path="/faq"
                 element={
                   <Layout>
-                    < Timer />
+                    <FaqPage />
                   </Layout>
                 
                 }

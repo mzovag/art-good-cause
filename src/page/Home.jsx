@@ -146,17 +146,8 @@ const chatitisData = [
 
 
 const Home = () => {
-    const [ openTaskInput, setOpenTaskInput ] = useState(false);
-    const [open, setOpen] = useState(false);
-    const [workMin, setWorkMin] = useState(45);
-    const [breakMin, setBreakMin] = useState(15);
     const inputRef = useRef(null);
     const [users, setUsers] = useState([]);
-
-    const handleTaskButton = () => {
-        setOpenTaskInput(true);
-        inputRef.current.focus();
-    }
 
     // useEffect(()=>{
     //   console.log(db)   

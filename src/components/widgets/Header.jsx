@@ -63,7 +63,7 @@ const Header = () => {
           // https://firebase.google.com/docs/reference/js/firebase.User
           const uid = user.uid;
           isLoginSet(true);
-          console.log("user", user)
+          console.log("user: ", user)
         } else {
           // User is signed out
           // ...
@@ -100,14 +100,14 @@ const Header = () => {
         </NavLink>
     
         <NavLink 
-          to="/stopwatch"
+          to="/faq"
           className={({isActive}) => 
             isActive? "inline-block text-secondary mr-4 text-sm"
             : 
             "mr-4 text-sm"
           }    
         >
-          Stopwatch
+          FAQ
             
         </NavLink> 
     
