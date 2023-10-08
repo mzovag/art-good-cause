@@ -12,24 +12,24 @@ const index = ({ src, title, author, price, inProject = false, status, id, class
         
         {inProject ? (
           <div className='w-full text-black bg-white rounded-b-xl absolute z-10 bottom-0 left-0 p-4'>
-            <div class="flex justify-between">
-              <span class="text-xl font-bold text-black ">{title}</span>
-              <span class="text-base font-medium text-black "></span>
+            <div className="flex justify-between">
+              <span className="text-xl font-bold text-black ">{title}</span>
+              <span className="text-base font-medium text-black "></span>
             </div>
             <div className='w-full bg-gray-190 rounded-full h-2.5'>
               <div className='bg-gray-800 h-2.5 rounded-full' style={{ width: `${price}%` }}></div>
             </div>
-            <div class="flex justify-between">
-              <span class="text-md font-medium text-black ">{author}</span>
-              <span class="text-base font-medium text-black ">{price}/100</span>
+            <div className="flex justify-between">
+              <span className="text-md font-medium text-black ">{author}</span>
+              <span className="text-base font-medium text-black ">{price}/100</span>
             </div>
           </div>) 
           : (
             <div className='w-full absolute z-10 bottom-0 left-0 p-4'>
               <h5 className='text-white font-semibold text-lg'>{title}</h5>
-              <div class="flex justify-between">
-                <span class="text-2xl font-bold text-white ">Price:</span>
-                <span class="text-base font-medium text-white ">{price}/100</span>
+              <div classNmae="flex justify-between">
+                <span className="text-2xl font-bold text-white ">Price:</span>
+                <span className="text-base font-medium text-white ">{price}/100</span>
               </div>
               <div className='w-full bg-progress rounded-full h-2.5'>
                 <div className='bg-white h-2.5 rounded-full' style={{ width: `${price}%` }}></div>

@@ -74,7 +74,9 @@ const Header = () => {
 
     const intervalID = setInterval(()=>{
         // console.log("yes")
-    }, 1000)  
+    }, 1000)
+    
+    console.log(auth.currentUser)
 
     return () => clearInterval(intervalID);
 }, [])

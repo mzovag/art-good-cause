@@ -1,7 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore, doc, getDoc, collection } from 'firebase/firestore';
+import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getDatabase } from "firebase/database";
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -33,6 +34,10 @@ const app = initializeApp(firebaseConfig);
 // Initialize Firebase Authentication and get a reference to the service
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+
+const usersCol = collection(db, 'users');
+const userSnapshot = await getDocs(usersCol);
+export const userList = userSnapshot.docs.map(doc => doc.data());
 
 //export const querySnapshot = await getDocs(collection(db, "users"));
 

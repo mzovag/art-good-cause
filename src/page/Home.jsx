@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Card from '../components/elements/Card';
 import Text from '../components/elements/Text';
 import ProjectCard from '../components/elements/ProjectCard';
@@ -7,7 +7,7 @@ import ScrollToHash from '../components/elements/ScrollToHash';
 import img from '../components/assets/test-image.svg';
 import bottom from '../components/assets/animation.svg';
 
-// import { db } from '../firebase'; 
+import { userList } from "../firebase";
 
 
 const progectsData = [
@@ -152,6 +152,11 @@ const chatitisData = [
 
 
 const Home = () => {
+
+  useEffect(() => {
+    console.log(userList)
+    
+  })
 
   return (
     <>
