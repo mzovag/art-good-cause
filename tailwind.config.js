@@ -13,6 +13,7 @@ module.exports = {
       'gray': 'rgba(244, 244, 244, 1)',
       'gray-100': 'rgba(0, 0, 0, 0.1)',
       'gray-300': 'rgba(0, 0, 0, 0.3)',
+      'gray-500': 'rgba(0, 0, 0, 0.5)',
       'gray-190': 'rgba(0, 0, 0, 0.19)',
       'gray-800': 'rgba(12, 12, 12, 1)',
       'lightGray': 'rgba(255, 255, 255, 0.82)',

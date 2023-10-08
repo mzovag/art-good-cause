@@ -21,7 +21,8 @@ const Header = () => {
         console.log("Signed out successfully");
         isLoginSet(false);
     }).catch((error) => {
-    // An error happened.
+      // An error happened.
+      console.log(error.text);
     }); 
   }
   const handleSingIn = () => {
@@ -63,7 +64,7 @@ const Header = () => {
           // https://firebase.google.com/docs/reference/js/firebase.User
           const uid = user.uid;
           isLoginSet(true);
-          console.log("user: ", user)
+          console.log("user: ", uid)
         } else {
           // User is signed out
           // ...

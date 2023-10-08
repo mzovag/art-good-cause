@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Card from '../components/elements/Card';
 import Text from '../components/elements/Text';
 import ProjectCard from '../components/elements/ProjectCard';
@@ -88,6 +88,7 @@ const chatitisData = [
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries',
     arts: [
       {
+        id: "nft1234",
         title: "Test New Image",
         status: "art",
         author: "Jony Doe",
@@ -95,6 +96,7 @@ const chatitisData = [
         imageSrc: require("../components/assets/image_6.png")
       },
       {
+        id: "nft1235",
         title: "Test NFT Image",
         status: "art",
         author: "Joe Doe",
@@ -102,6 +104,7 @@ const chatitisData = [
         imageSrc: require("../components/assets/image_7.png")
       },
       {
+        id: "nft1236",
         title: "Test New Image",
         status: "art",
         author: "Jony Doe",
@@ -120,6 +123,7 @@ const chatitisData = [
     description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using',
     arts: [
       {
+        id: "nft1237",
         title: "Test New Image",
         status: "art",
         author: "Jony Doe",
@@ -127,6 +131,7 @@ const chatitisData = [
         imageSrc: require("../components/assets/image_6.png")
       },
       {
+        id: "nft1238",
         title: "Test NFT Image",
         status: "art",
         author: "Joe Doe",
@@ -134,6 +139,7 @@ const chatitisData = [
         imageSrc: require("../components/assets/image_7.png")
       },
       {
+        id: "nft1239",
         title: "Test New Image",
         status: "art",
         author: "Jony Doe",
@@ -146,12 +152,6 @@ const chatitisData = [
 
 
 const Home = () => {
-    const inputRef = useRef(null);
-    const [users, setUsers] = useState([]);
-
-    // useEffect(()=>{
-    //   console.log(db)   
-    // }, [])
 
   return (
     <>
@@ -184,7 +184,7 @@ const Home = () => {
       <Text className='text-2xl font-bold'>Last added illustrations</Text>
       <div className='grid grid-cols-4 gap-4 mt-4'>
         {progectsData.map(( item, idx ) => 
-          <Card key={idx} title={item.title} src={item.imageSrc} price={item.price} status={item.status} author={item.author} />
+          <Card key={idx} id={item.id} title={item.title} src={item.imageSrc} price={item.price} status={item.status} author={item.author} />
         )}
       </div>
     </section>
@@ -204,7 +204,7 @@ const Home = () => {
             description={item.description}
           >
             {item.arts.slice(0, 3).map((art, i) => 
-              <Card key={i} title={art.title} src={art.imageSrc} inProject={true} price={art.price} author={art.author} />
+              <Card key={i} id={art.id} title={art.title} src={art.imageSrc} inProject={true} price={art.price} author={art.author} />
             )}
           </ProjectCard>
         )}

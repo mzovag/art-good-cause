@@ -6,13 +6,14 @@ import Login from './page/Login';
 import FaqPage from './page/FaqPage';
 import Mission from './page/Mission';
 import ProjectPage from './page/ProjectPage';
+import NftImagePage from './page/NftImagePage';
 import {Routes, Route} from 'react-router-dom';
 import Layout from './components/widgets/Layout';
-import { BrowserRouter as Router, useParams } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 function App() {
-  let { id } = useParams();
+  // let { id } = useParams();
   return (
     <Router>
       <div className="App bg-white">
@@ -67,7 +68,17 @@ function App() {
                   </Layout>
                 
                 }
-              />              
+              />  
+
+              <Route 
+                path="/nft-image/:id"
+                element={
+                  <Layout>
+                    <NftImagePage />
+                  </Layout>
+                
+                }
+              />             
               
               <Route path="/singup" element={<Signup/>}/>
               <Route path="/login" element={<Login/>}/>

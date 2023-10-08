@@ -3,8 +3,7 @@ import Text from '../components/elements/Text';
 import Popup from '../components/elements/Popup';
 
 import img from '../components/assets/modal.png';
-import { DocumentDuplicateIcon } from "@heroicons/react/24/outline"
-import FaqComponent from '../components/widgets/FaqComponent';
+import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 
 
 const Mission = () => {
