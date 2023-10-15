@@ -162,8 +162,8 @@ const Home = () => {
     <>
     
     <section className="bg-primary rounded-2xl  px-10  mb-10">    
-      <div className='flex justify-between items-center py-20'>
-        <div className='flex flex-col justify-between w-2/4'>
+      <div className='flex flex-col md:flex-row justify-between items-center py-20'>
+        <div className='flex order-last md:order-1 flex-col justify-between w-full md:w-2/4'>
           <Text className='text-4xl pb-12'>Charity NFT gallery.  <br/> Be part of the art for a good Cause.</Text>
           <div>
             <button className='bg-black text-white py-4 px-12 mb-4 max-w-xs rounded-lg'>Show me what you have!</button>
@@ -173,7 +173,7 @@ const Home = () => {
           
         </div>
         
-        <div className='w-2/4 flex flex-col justify-between items-center'>
+        <div className='w-full order-1 md:order-last md:w-2/4 mb-10 md:mb-0 flex flex-col justify-between items-center'>
           <img src={img} alt='main' />
         </div> 
       </div>    
@@ -187,7 +187,7 @@ const Home = () => {
 
     <section className="py-12 flex flex-col">
       <Text className='text-2xl font-bold'>Last added illustrations</Text>
-      <div className='grid grid-cols-4 gap-4 mt-4'>
+      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4'>
         {progectsData.map(( item, idx ) => 
           <Card key={idx} id={item.id} title={item.title} src={item.imageSrc} price={item.price} status={item.status} author={item.author} />
         )}
@@ -219,9 +219,9 @@ const Home = () => {
 
     <section id="what_is" className="bg-sidebar min-h-[568px] rounded-3xl flex flex-col justify-center px-5 py-12 mb-12">
       <ScrollToHash />
-      <div className='flex w-full content-center items-center'>
-        <img src={bottom} alt='main' />
-        <div className='ml-12'>
+      <div className='flex flex-col md:flex-row w-full content-center items-center'>
+        <img src={bottom} alt='main' className='mb-10 md:mb-0' />
+        <div className='ml-0 md:ml-12'>
           <Text className='text-3xl font-medium mb-5'>It is very easy to buy NFT</Text>
           <p className='text-xl font-medium mb-2'>
           Pre-NFTs, known as token pre-sales, is an opportunity given to investors to acquire NFT at a lower price, all before its official release on the market, many specialists in the Blockchain world affirm that presales are an excellent time to invest in new projects, but it depends on the trust that is generated around that presale. Concretely, presales represent early access to a private mint. Clearly, if you manage to get your hands on access to a pre-sale, it means that you can mint your NFT in peace, without thousands of users trying to do the same.

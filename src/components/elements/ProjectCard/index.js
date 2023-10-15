@@ -17,8 +17,8 @@ const index = ({ avatarSrc, name, artsNumbers, bgImage, cost, description, id, c
   const path = generatePath("/progect/:id", { id: id });
 
   return (
-    <div className='grid grid-cols-4 gap-4 p-10 rounded-2xl w-full bg-cover' style={{ backgroundImage: `url(${currentImage})` }}>
-      <div className='flex flex-col'>
+    <div className='grid grid-cols-3 md:grid-cols-4 gap-4 p-10 rounded-2xl w-full bg-cover' style={{ backgroundImage: `url(${currentImage})` }}>
+      <div className='col-start-1 col-end-4 md:col-start-1 md:col-end-1 flex flex-col'>
         <NavLink to={path} >                    
           <img src={avatarSrc} alt={name} className='w-32 h-32 border-4 border-gray-300 rounded-lg object-cover' />
         </NavLink>
